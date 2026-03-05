@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main (){
+    int array[100],i,n,j,k,temp;
+
+    printf("enter the size of the array?");
+    scanf("%d",&n);
+
+    //array banai 
+    for (i=0;i<n;i++){
+        scanf("%d",& array[i]);
+    }
+
+    for (i=0;i<n;i++){
+        printf("%d",array[i]);
+    }
+
+    // insertion sort :
+
+    for(i=1;i<n;i++){
+       temp=array[i];
+        j=i-1;
+    while(j>=0 && array[j]>temp) {
+        array[j+1]=array[j];
+        j--;
+    }
+    array[j+1]= temp;
+    
+}
+for(k=0;k<n;k++){
+        printf(" %d",array[k]);
+    }
+}
